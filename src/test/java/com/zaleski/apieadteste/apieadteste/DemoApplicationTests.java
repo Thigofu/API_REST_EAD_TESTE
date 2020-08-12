@@ -1,4 +1,4 @@
-package com.example.restapispringteste;
+package com.zaleski.apieadteste.apieadteste;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

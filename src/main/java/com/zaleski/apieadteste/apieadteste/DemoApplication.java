@@ -1,4 +1,4 @@
-package com.example.restapispringteste;
+package com.zaleski.apieadteste.apieadteste;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
