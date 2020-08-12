@@ -18,9 +18,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "RELACIONAMENTOCURDISALUNO_TBL")
+@Table(name = "MATRICULA_TBL")
 
-public class RelacionamentoCurDisAluno {
+public class Matricula {
     @Id
     @GeneratedValue
     private int id;
@@ -48,4 +48,8 @@ public class RelacionamentoCurDisAluno {
     @PrimaryKeyJoinColumn
     @OneToOne
     private Curso curso;
+    
+	public Matricula orElse(Object object) {
+		return null;
+	}
 }
