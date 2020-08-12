@@ -30,27 +30,27 @@ public class ControladorPessoa {
         return service.savePessoas(pessoas);
     }
 
-    @GetMapping("/pessoas")
+    @GetMapping("/buscaPessoas")
     public List<Pessoa> findAllPessoas() {
         return service.getPessoas();
     }
 
-    @GetMapping("/pessoasById/{id}")
+    @GetMapping("/buscaPessoasById/{id}")
     public Pessoa findPessoasById(@PathVariable int id){
         return service.getPessoaById(id);
     }
 
-    @GetMapping("/pessoas/{name}")
+    @GetMapping("/buscaPessoas/{name}")
     public Pessoa findpessoaById(@PathVariable String nome){
         return service.getPessoaByName(nome);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/updatePessoa")
     public Pessoa updatePessoa(@RequestBody Pessoa pessoa){
         return service.updatePessoa(pessoa);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deletePessoa/{id}")
     public String deletePessoa(@RequestBody int id){
         return service.deletePessoa(id);
     }
