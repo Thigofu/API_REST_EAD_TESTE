@@ -5,7 +5,10 @@ import com.zaleski.apieadteste.apieadteste.entity.Matricula;
 import com.zaleski.apieadteste.apieadteste.repository.RepositorioMatricula;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class ServicoMatricula {
 
     @Autowired

@@ -40,10 +40,6 @@ public class ControladorPessoa {
         return service.getPessoaById(id);
     }
 
-    @GetMapping("/buscaPessoas/{name}")
-    public Pessoa findpessoaById(@PathVariable String nome){
-        return service.getPessoaByName(nome);
-    }
 
     @PutMapping("/updatePessoa")
     public Pessoa updatePessoa(@RequestBody Pessoa pessoa){

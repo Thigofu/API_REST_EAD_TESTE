@@ -15,45 +15,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
 public class ControladorCurso {
 
     @Autowired
-    private ServicoCurso service;
+    private ServicoCurso servicocurso;
 
     @PostMapping("/addCurso")
     private Curso addCurso(@RequestBody Curso curso){
-        return service.saveCurso(curso);
+        return servicocurso.saveCurso(curso);
     }
 
     @PostMapping("/addCursos")
     private List<Curso> addCursos(@RequestBody List<Curso> cursos){
-        return service.saveCursos(cursos);
+        return servicocurso.saveCursos(cursos);
     }
 
     @GetMapping("/buscaCursos")
     public List<Curso> findAllCursos() {
-        return service.getCursos();
+        return servicocurso.getCursos();
     }
 
     @GetMapping("/buscaCursosById/{id}")
     public Curso findCursosById(@PathVariable int id){
-        return service.getCursoById(id);
+        return servicocurso.getCursoById(id);
     }
 
-    @GetMapping("/buscaCursos/{name}")
-    public Curso findcursoById(@PathVariable String nome){
-        return service.getCursoByName(nome);
-    }
 
     @PutMapping("/updateCurso")
     public Curso updateCurso(@RequestBody Curso curso){
-        return service.updateCurso(curso);
+        return servicocurso.updateCurso(curso);
     }
 
     @DeleteMapping("/deleteCurso/{id}")
     public String deleteCurso(@RequestBody int id){
-        return service.deleteCurso(id);
+        return servicocurso.deleteCurso(id);
     }
     
 }

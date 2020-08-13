@@ -41,10 +41,6 @@ public class ControladorTurma {
         return service.getTurmaById(id);
     }
 
-    @GetMapping("/buscaTurmas/{name}")
-    public Turma findturmaById(@PathVariable String nome){
-        return service.getTurmaByName(nome);
-    }
 
     @PutMapping("/updateTurma")
     public Turma updateTurma(@RequestBody Turma turma){

@@ -5,7 +5,9 @@ import com.zaleski.apieadteste.apieadteste.entity.Turma;
 import com.zaleski.apieadteste.apieadteste.repository.RepositorioTurma;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServicoTurma {
     @Autowired
     private RepositorioTurma repository;
@@ -25,9 +27,6 @@ public class ServicoTurma {
         return repository.findById(id).orElse(null);
     }
 
-    public Turma getTurmaByName(String name){
-        return repository.findByName(name);
-    }
 
     public String deleteTurma(int id){
         repository.deleteById(id);

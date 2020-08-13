@@ -40,11 +40,6 @@ public class ControladorDisciplina {
         return service.getDisciplinaById(id);
     }
 
-    @GetMapping("/buscaDisciplinas/{name}")
-    public Disciplina finddisciplinaById(@PathVariable String nome){
-        return service.getDisciplinaByName(nome);
-    }
-
     @PutMapping("/updateDisciplina")
     public Disciplina updateDisciplina(@RequestBody Disciplina disciplina){
         return service.updateDisciplina(disciplina);

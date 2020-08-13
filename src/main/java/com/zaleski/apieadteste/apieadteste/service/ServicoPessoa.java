@@ -5,9 +5,10 @@ import com.zaleski.apieadteste.apieadteste.entity.Pessoa;
 import com.zaleski.apieadteste.apieadteste.repository.RepositorioPessoa;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
-
+@Service
 public class ServicoPessoa {
     @Autowired
     private RepositorioPessoa repository;
@@ -27,9 +28,6 @@ public class ServicoPessoa {
         return repository.findById(id).orElse(null);
     }
 
-    public Pessoa getPessoaByName(String name){
-        return repository.findByName(name);
-    }
 
     public String deletePessoa(int id){
         repository.deleteById(id);

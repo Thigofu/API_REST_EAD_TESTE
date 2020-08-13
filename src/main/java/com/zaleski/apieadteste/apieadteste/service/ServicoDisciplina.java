@@ -1,12 +1,12 @@
 package com.zaleski.apieadteste.apieadteste.service;
 
-
 import java.util.List;
 import com.zaleski.apieadteste.apieadteste.entity.Disciplina;
 import com.zaleski.apieadteste.apieadteste.repository.RepositorioDisciplina;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
+@Service
 public class ServicoDisciplina {
 
     @Autowired
@@ -27,9 +27,6 @@ public class ServicoDisciplina {
         return repository.findById(id).orElse(null);
     }
 
-    public Disciplina getDisciplinaByName(String name){
-        return repository.findByName(name);
-    }
 
     public String deleteDisciplina(int id){
         repository.deleteById(id);
